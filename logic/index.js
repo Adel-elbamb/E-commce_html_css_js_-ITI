@@ -26,3 +26,42 @@ function logout(event) {
 }
 
 logoutButton.addEventListener("click", logout);
+
+// =======================================slider ========================================
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+// Function to show a specific slide
+function showSlide(index) {
+    // Hide all slides
+    slides.forEach((slide) => {
+        slide.classList.remove('active');
+    });
+
+    // Show the current slide
+    slides[index].classList.add('active');
+
+    // Move the slides container
+    const slidesContainer = document.querySelector('.slides');
+    slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+}
+
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+}
+
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+}
+
+
+setInterval(nextSlide, 4000);
+
+
+showSlide(currentSlide);

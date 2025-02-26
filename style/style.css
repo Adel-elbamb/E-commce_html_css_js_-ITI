@@ -2,6 +2,10 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
 
 .container {
     width: 300px;
@@ -14,3 +18,275 @@ input, button {
     margin: 10px 0;
     padding: 10px;
 }
+/* style in css  */
+/* slider============================================ */
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Slider Container */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Slides Container */
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Slide */
+.slide {
+  min-width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Slide Content */
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.ltext-101 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.ltext-201 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(35, 26, 26);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Animation Classes */
+.animated {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+.rollIn {
+  animation-name: rollIn;
+}
+
+.lightSpeedIn {
+  animation-name: lightSpeedIn;
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+}
+
+.rotateInDownLeft {
+  animation-name: rotateInDownLeft;
+}
+
+.rotateInUpRight {
+  animation-name: rotateInUpRight;
+}
+
+.rotateIn {
+  animation-name: rotateIn;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+      opacity: 0;
+      transform: scale(0.5);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes rollIn {
+  from {
+      opacity: 0;
+      transform: translateX(-100%) rotate(-120deg);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0) rotate(0);
+  }
+}
+
+@keyframes lightSpeedIn {
+  from {
+      opacity: 0;
+      transform: translateX(100%) skewX(-30deg);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0) skewX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+      opacity: 0;
+      transform: translateY(100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes rotateInDownLeft {
+  from {
+      opacity: 0;
+      transform: rotate(-45deg);
+  }
+  to {
+      opacity: 1;
+      transform: rotate(0);
+  }
+}
+
+@keyframes rotateInUpRight {
+  from {
+      opacity: 0;
+      transform: rotate(45deg);
+  }
+  to {
+      opacity: 1;
+      transform: rotate(0);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+      opacity: 0;
+      transform: rotate(-180deg);
+  }
+  to {
+      opacity: 1;
+      transform: rotate(0);
+  }
+}
+
+/* =============================
+ */
+
+/* Custom CSS for Banner */
+.sec-banner {
+  padding: 80px 0; /* Adjust padding as needed */
+ 
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.card-body {
+  background: rgba(9, 107, 205, 0.5); /* Semi-transparent overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+}
+
+.card:hover .card-body {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.btn-outline-light {
+  border-width: 2px;
+  font-weight: 500;
+}
+
+
+
+
+/* ============================products=============================== */
+
