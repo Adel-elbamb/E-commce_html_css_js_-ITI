@@ -8,12 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Bootstrap and FontAwesome (for icons) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<script src="https://kit.fontawesome.com/YOUR_FONTAWESOME_KIT.js" crossorigin="anonymous"></script>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light  shadow-sm fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light  shadow-sm fixed-top">
             <div class="container-fluid">
                 <!-- Logo on the left -->
                 <a class="navbar-brand ps-5 ms-5" href="#">
@@ -33,16 +37,16 @@
                                 Home
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="index.html">Homepage 1</a></li>
-                                <li><a class="dropdown-item" href="index.html">Homepage 2</a></li>
-                                <li><a class="dropdown-item" href="index.html">Homepage 3</a></li>
+                                <li><a class="dropdown-item" href="./index.html">Homepage 1</a></li>
+                                <li><a class="dropdown-item" href="./index.html">Homepage 2</a></li>
+                                <li><a class="dropdown-item" href="./index.html">Homepage 3</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="product.html">Shop</a></li>
-                        <li class="nav-item"><a class="nav-link" href="shopping-cart.html">Features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/product.html">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/cart.html">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                     </ul>
                 </div>
 
@@ -72,7 +76,7 @@
                 <div class="slide-content">
                     <div class="animated fadeInDown">
                         <span class="ltext-101 cl2 respon2">
-                            Women Collection 2018
+                            Women Collection 2025
                         </span>
                     </div>
                     <div class="animated fadeInUp delay-800">
@@ -81,7 +85,7 @@
                         </h2>
                     </div>
                     <div class="animated zoomIn delay-1600">
-                        <a href="product.html" class="btn btn-primary">
+                        <a href="./pages/product.html" class="btn btn-primary">
                             Shop Now
                         </a>
                     </div>
@@ -102,7 +106,7 @@
                         </h2>
                     </div>
                     <div class="animated slideInUp delay-1600">
-                        <a href="product.html" class="btn btn-primary">
+                        <a href="./pages/product.html" class="btn btn-primary">
                             Shop Now
                         </a>
                     </div>
@@ -114,7 +118,7 @@
                 <div class="slide-content">
                     <div class="animated rotateInDownLeft">
                         <span class="ltext-101 cl2 respon2">
-                            Men Collection 2018
+                            Men Collection 2025
                         </span>
                     </div>
                     <div class="animated rotateInUpRight delay-800">
@@ -123,7 +127,7 @@
                         </h2>
                     </div>
                     <div class="animated rotateIn delay-1600">
-                        <a href="product.html" class="btn btn-primary">
+                        <a href="./pages/product.html" class="btn btn-primary">
                             Shop Now
                         </a>
                     </div>
@@ -136,17 +140,17 @@
     <!-- Banner Section -->
     <div class="sec-banner bg-light py-5">
         <div class="container">
-            <div class="row g-4">
+            <div class="row g-4 col-lg-12">
                 <!-- Block 1 - Women -->
                 <div class="col-md-6  col-lg-4 ">
-                    <div class="card border-0">
+                    <div class="card border-0 " style="width: 100%;">
                         <img src="images/banner-01.jpg" class="card-img-top" alt="Women Banner">
                         <div class="card-body position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-between p-4 text-white">
                             <div>
                                 <h3 class="card-title fs-3">Women</h3>
-                                <p class="card-text">Spring 2018</p>
+                                <p class="card-text">Spring 2025</p>
                             </div>
-                            <a href="product.html" class="btn btn-outline-light align-self-start">Shop Now</a>
+                            <a href="./pages/product.html" class="btn btn-outline-light align-self-start">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -158,9 +162,9 @@
                         <div class="card-body position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-between p-4 text-white">
                             <div>
                                 <h3 class="card-title fs-3">Men</h3>
-                                <p class="card-text">Spring 2018</p>
+                                <p class="card-text">Spring 2025</p>
                             </div>
-                            <a href="product.html" class="btn btn-outline-light align-self-start">Shop Now</a>
+                            <a href="./pages/product.html" class="btn btn-outline-light align-self-start">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -174,7 +178,7 @@
                                 <h3 class="card-title fs-3">Accessories</h3>
                                 <p class="card-text">New Trend</p>
                             </div>
-                            <a href="product.html" class="btn btn-outline-light align-self-start">Shop Now</a>
+                            <a href="./pages/product.html" class="btn btn-outline-light align-self-start">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -184,18 +188,106 @@
 
 
 <!-- ==================================================================filter product ================= -->
+
+    <!-- Product Section -->
+    <div class="product">
+        <!-- Header -->
+        <div class="header_product">
+            <h3>PRODUCTOVERVIEW</h3>
+        </div>
+
+        <!-- Product Links -->
+        <div class="product_links">
+            <ul>
+                <li><a href="#"onclick="event.preventDefault(); filter_product('all')" class="active">All Products</a></li>
+                <li><a  href="#" onclick="event.preventDefault(); filter_product('women')">Women</a></li>
+                <li><a href="#" onclick="event.preventDefault(); filter_product('men')">Men</a></li>
+                <li><a href="#" href="#"onclick="event.preventDefault(); filter_product('bag')">Bag</a></li>
+                <li><a href="#" href="#"onclick="event.preventDefault(); filter_product('shoes')">Shoes</a></li>
+                <li><a href="#" href="#"onclick="event.preventDefault(); filter_product('watches')">Watches</a></li>
+            </ul>
+        </div>
+    </div>
+<!-- =============================================all products ======================= -->
  
+    <!-- Product Grid -->
+    <div class="container">
+        <div class="row " id="product-grid">
+            <!-- Products will be dynamically added here -->
+        </div>
+        <div class="d-flex justify-content-center w-100 pt-4">
+            <a href="#" class="btn btn-outline-dark px-4 py-2" style="transition: 2s;">
+                Load More
+            </a>
+        </div>
+        
+<!-- =======================================footer========================================= -->
 
-  
+<footer class=" py-5 mt-4 w-100">
+    <footer class="py-5 ">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address" fdprocessedid="rcgm45">
+            <button class="btn btn-primary" type="button" fdprocessedid="tn5kpk">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© 2022 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+<!-- ==========================updown========== -->
 
 
-
-    
-
-
-
-
-
+<button id="backToTop" class="btn btn-primary position-fixed bottom-3 end-3 d-none" style="width: 50px; height: 50px; border-radius: 50%;">
+    ccccc
+    <i class="fas fa-chevron-up"></i>
+</button>
 
 
 

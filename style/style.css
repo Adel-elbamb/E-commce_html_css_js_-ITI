@@ -1,16 +1,14 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 * {
   margin: 0;
   padding: 0;
 }
 
-.container {
-    width: 300px;
-    margin: auto;
-}
 
 input, button {
     display: block;
@@ -45,7 +43,7 @@ body {
 .slide {
   min-width: 100%;
   height: 100vh; /* Full viewport height */
-  background-size: cover;
+  background-size:cover;
   background-position: center;
   position: relative;
 }
@@ -251,6 +249,7 @@ body {
  */
 
 /* Custom CSS for Banner */
+
 .sec-banner {
   padding: 80px 0; /* Adjust padding as needed */
  
@@ -287,6 +286,169 @@ body {
 
 
 
+/* ============================products================================================ */
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
 
-/* ============================products=============================== */
+/* Product Section */
+.product {
+  padding: 20px;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+/* Header */
+.header_product h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Product Links */
+.product_links ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.product_links ul li {
+  display: inline-block;
+}
+
+.product_links ul li a {
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #333;
+  background-color: transparent;
+  border: 2px solid #333;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.product_links ul li a.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.product_links ul li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+/* =================================================image product======================== */
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 20px;
+}
+
+
+.block2 {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.block2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.block2-pic {
+  position: relative;
+  overflow: hidden;
+}
+
+.block2-pic img {
+  width: 100%;
+  height: 400PX;
+  display: block;
+}
+
+.block2-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.block2:hover .block2-btn {
+  opacity: 1;
+}
+
+.block2-txt {
+  padding: 10px;
+  text-align: center;
+}
+
+.block2-txt a {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.block2-txt a:hover {
+  color: #007bff;
+}
+
+.stext-105 {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+}
+
+.btn-addwish-b2 img {
+  width: 22px;
+  height: 22px;
+  transition: opacity 0.3s ease;
+}
+
+.btn-addwish-b2 img.icon-heart2 {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn-addwish-b2:hover img.icon-heart1 {
+  opacity: 0;
+}
+
+.btn-addwish-b2:hover img.icon-heart2 {
+  opacity: 1;
+}
+
+/* ===========================footer=====================
+ */
+
+ footer {
+  width: 100%;
+  border-color: #333;
+ }

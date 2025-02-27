@@ -1,62 +1,69 @@
-// Fetch products from Fake Store API
-async function fetchProducts() {
-    try {
-        const response = await fetch("https://api.escuelajs.co/api/v1/products");
-        const products = await response.json();
-        displayProducts(products);
-    } catch (error) {
-        console.error("Error fetching products:", error);
-    }
-}
 
-// Display products on the page
-function displayProducts(products) {
-    const productsContainer = document.getElementById("products-container");
+let local_products = JSON.parse(localStorage.getItem("products")); 
+  console.log(local_products)
+        // Render products in the HTML
+   function renderProducts() {
+            const productGrid = document.getElementById("product-grid");
 
-    products.forEach(product => {
-        const productCard = `
-            <div class="col-md-4 mb-4">
-                <div class="card product-card h-100">
-                    <img src="${product.images[0]}" class="card-img-top product-image p-3" alt="${product.title}">
-                    <div class="card-body">
-                        <h5 class="card-title">${product.title}</h5>
-                        <p class="card-text">${product.description}</p>
-                        <p class="card-text"><strong>Price: $${product.price}</strong></p>
-                        <p class="card-text"><small class="text-muted">Category: ${product.category.name}</small></p>
-                        <button class="btn btn-primary">Add to Cart</button>
+            local_products.forEach((product) => {
+                const productHTML = `
+                    <div class="col-md-3 isotope-item mt-5 ${product.category}">
+                        <div class="block2">
+                            <div class="block2-pic hov-img0">
+                                <img src="${product.image}" alt="${product.name}">
+                                <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
+                                    Quick View
+                                </a>
+                            </div>
+                            <div class="block2-txt">
+                                <a href="product-detail.html">
+                                    ${product.name}
+                                </a>
+                                <span class="stext-105">
+                                    $${product.price.toFixed(2)}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                productGrid.innerHTML += productHTML;
+            });
+        }
+        if (local_products.length > 0) {
+            renderProducts();
+        }
+
+
+        
+// ===============================filter_poduct=========================
+function filter_product(x) {
+    const productGrid = document.getElementById("product-grid");
+    productGrid.innerHTML = ""; 
+
+    local_products.forEach((product) => {
+        if (x === "all" || product.category === x) {
+            const productHTML = `
+                <div class="col-md-3 isotope-item mt-5 ${product.category}">
+                    <div class="block2">
+                        <div class="block2-pic hov-img0">
+                            <img src="${product.image}" alt="${product.name}">
+                            <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
+                                Quick View
+                            </a>
+                        </div>
+                        <div class="block2-txt">
+                            <a href="product-detail.html">
+                                ${product.name}
+                            </a>
+                            <span class="stext-105">
+                                $${product.price.toFixed(2)}
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        `;
-        productsContainer.innerHTML += productCard;
+            `;
+            productGrid.innerHTML += productHTML;
+        }
     });
 }
-
-// Fetch and display products when the page loads
-fetchProducts();
-
-// ==========================slides========================
-let currentIndex = 0;
-
-function showSlide(index) {
-  const slides = document.querySelector(".slides");
-  const totalSlides = document.querySelectorAll(".slide").length;
-  
-  if (index >= totalSlides) currentIndex = 0;
-  if (index < 0) currentIndex = totalSlides - 1;
-  
-  slides.style.transform = `translateX(${-currentIndex * 500}px)`;
-}
-
-function nextSlide() {
-  currentIndex++;
-  showSlide(currentIndex);
-}
-
-function prevSlide() {
-  currentIndex--;
-  showSlide(currentIndex);
-}
-
-// Auto slide every 3 seconds
-setInterval(nextSlide, 3000);
