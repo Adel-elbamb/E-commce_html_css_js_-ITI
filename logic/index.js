@@ -218,9 +218,9 @@ const products = [
                         <div class="block2">
                             <div class="block2-pic hov-img0">
                                 <img src="${product.image}" alt="${product.name}">
-                                <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
-                                    Quick View
-                                </a>
+                        <a href="product-detail.html" onclick="viewProduct(${product.id})" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
+                            Quick View
+                        </a>
                             </div>
                             <div class="block2-txt">
                                 <a href="product-detail.html">
@@ -254,9 +254,9 @@ function filter_product(x) {
                     <div class="block2">
                         <div class="block2-pic hov-img0">
                             <img src="${product.image}" alt="${product.name}">
-                            <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
-                                Quick View
-                            </a>
+                        <a href="product-detail.html" onclick="viewProduct(${product.id})" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
+                            Quick View
+                        </a>
                         </div>
                         <div class="block2-txt">
                             <a href="product-detail.html">
@@ -274,6 +274,13 @@ function filter_product(x) {
     });
 }
 
+
+// ========================================= quick view button =============================
+
+function viewProduct(productId) {
+    const selectedProduct = local_products.find(p => p.id === productId);
+    localStorage.setItem("selectedProduct", JSON.stringify(selectedProduct));
+}
 
 
 

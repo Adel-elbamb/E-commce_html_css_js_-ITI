@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="./style/view_product.css"> <!-- Add your CSS file -->
+</head>
+<body>
+
+    <!-- <div class="container">
+        <div class="product-detail">
+            <img id="product-image" src="" alt="">
+            <h2 id="product-name"></h2>
+            <p id="product-price"></p>
+            <p id="product-category"></p>
+        </div>
+    </div> -->
+
+ 
+    
+    <div class="container">
+        <!-- Left: Product Images -->
+        <div class="product-images">
+            <img src="main-image.jpg"  id="product-image" class="main-image" id="mainImage">
+            <!-- <div class="thumbnail-container">
+                <img src="thumb1.jpg" class="thumbnail" onclick="changeImage('thumb1.jpg')">
+                <img src="thumb2.jpg" class="thumbnail" onclick="changeImage('thumb2.jpg')">
+                <img src="thumb3.jpg" class="thumbnail" onclick="changeImage('thumb3.jpg')">
+            </div> -->
+        </div>
+    
+        <!-- Right: Product Details -->
+        <div class="product-details">
+            <h2 id="product-name"></h2>
+            <p id="product-price">$58.79</p>
+            <p>Short description of the product goes here.</p>
+    
+            <label for="size">Size</label>
+            <select id="size">
+                <option>Size S</option>
+                <option>Size M</option>
+                <option>Size L</option>
+            </select>
+    
+            <label for="color">Color</label>
+            <select id="color">
+                <option>Red</option>
+                <option>Blue</option>
+                <option>Black</option>
+            </select>
+    
+            <!-- Quantity Selector -->
+            <div class="quantity-selector">
+                <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                <input type="text" value="1" class="quantity-input" id="quantity">
+                <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+            </div>
+    
+            <!-- Add to Cart Button -->
+            <div class="button-group">
+                <button class="add-to-cart">ADD TO CART</button>
+                <button class="add-to-cart">BUY NOW</button>
+            </div>
+    
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-heart"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    <script>
+        // Retrieve product details from localStorage
+        const product = JSON.parse(localStorage.getItem("selectedProduct"));
+
+        // Update the HTML with product details
+        if (product) {
+            document.getElementById("product-image").src = product.image;
+            document.getElementById("product-name").innerText = product.name;
+            document.getElementById("product-price").innerText = "$" + product.price.toFixed(2);
+            document.getElementById("product-category").innerText = "Category: " + product.category;
+        }
+
+        document.querySelector('.add-to-cart').addEventListener('click', function () {
+        alert("Product added to cart!");
+    });
+
+    document.querySelector('.buy-now').addEventListener('click', function () {
+        alert("Redirecting to checkout...");
+        window.location.href = "checkout.html"; // Change to your actual checkout page
+    });
+
+    function changeImage(imageSrc) {
+        document.getElementById('mainImage').src = imageSrc;
+    }
+
+    function increaseQuantity() {
+        let qty = document.getElementById('quantity');
+        qty.value = parseInt(qty.value) + 1;
+    }
+
+    function decreaseQuantity() {
+        let qty = document.getElementById('quantity');
+        if (qty.value > 1) {
+            qty.value = parseInt(qty.value) - 1;
+        }
+    }
+    </script>
+
+</body>
+</html>
