@@ -7,21 +7,20 @@ function register(event) {
         event.preventDefault(); // Prevent form submission
     }
 
-    // Inputs
+    
     let name = document.getElementById("nameRegister").value.trim();
     let email = document.getElementById("emailRegister").value.trim();
     let password = document.getElementById("passwordRegister").value;
     let confirmPassword = document.getElementById("confirmRegister").value;
 
-    // Validation regex
+    
     let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    let passwordRegex = /^\d+$/;
+    let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/;
 
-    // Error validation elements
+
     let error = document.getElementById("erorrRegister");
     let errorReg = document.getElementsByClassName("error");
 
-    // Clear previous error messages
     for (let i = 0; i < errorReg.length; i++) {
         errorReg[i].innerHTML = "";
     }
@@ -32,31 +31,31 @@ function register(event) {
         return;
     }
 
-    // Validate Name
+    // name
     if (name.length < 3) {
         errorReg[0].innerHTML = "Name must be at least 3 characters long.";
         return;
     }
 
-    // Validate Email
+    // email
     if (!emailRegex.test(email)) {
         errorReg[1].innerHTML = "Invalid email format. Example: user@example.com";
         return;
     }
 
-    // Validate Password
+    //password 
     if (!passwordRegex.test(password)) {
         errorReg[2].innerHTML = "Password must be at least 8 characters, contain 1 uppercase letter, 1 number, and 1 special character.";
         return;
     }
 
-    // Validate Password Match
+    // Password Match
     if (password !== confirmPassword) {
         errorReg[3].innerHTML = "Passwords do not match.";
         return;
     }
 
-    // Check if the email already exists
+    //
     let existingUser = users.find(user => user.email === email);
     if (existingUser) {
         // alert("Email already registered. Try logging in.");
@@ -80,7 +79,7 @@ function register(event) {
 
     // Redirect to login page
     setTimeout(() => {
-        window.location.href = "../pages/login.html"; 
+        window.location.href = "./login.html"; 
     }, 500);
 }
 
@@ -118,7 +117,7 @@ function login(event) {
        localStorage.setItem("users", JSON.stringify(users));
         alert("Login successful! Redirecting...");
         setTimeout(() => {
-            window.location.href = "../index.html"; // Change to your dashboard page
+            window.location.href = "./index.html"; // Change to your dashboard page
         }, 500);
     } else {
          errorLogin[2].innerHTML="Invalid email or password. Please try again."

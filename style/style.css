@@ -1,8 +1,14 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
     text-align: center;
     margin: 0;
     padding: 0;
+}
+body {
+
+  margin: 0;
+  padding: 20px;
 }
 * {
   margin: 0;
@@ -287,13 +293,8 @@ body {
 
 
 /* ============================products================================================ */
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f9fa;
-}
+
+
 
 /* Product Section */
 .product {
@@ -314,7 +315,7 @@ body {
 
 /* Product Links */
 .product_links ul {
-  list-style: none; /* Remove bullet points */
+  list-style: none; 
   padding: 0;
   margin: 0;
   display: flex;
@@ -338,10 +339,10 @@ body {
   transition: all 0.3s ease;
 }
 
-.product_links ul li a.active {
+/* .product_links ul li a.active {
   background-color: #333;
   color: #fff;
-}
+} */
 
 .product_links ul li a:hover {
   background-color: #333;
@@ -349,12 +350,7 @@ body {
 }
 /* =================================================image product======================== */
 /* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  margin: 0;
-  padding: 20px;
-}
+
 
 
 .block2 {
@@ -447,8 +443,34 @@ body {
 
 /* ===========================footer=====================
  */
-
- footer {
+ /* footer {
   width: 100%;
-  border-color: #333;
- }
+  margin: 0;
+  padding: 0;
+}
+
+/* footer .px-5 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.container footer {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+} */
+
+/* Ensure no custom CSS is overriding container-fluid */
+#container-fluid {
+  width: 100%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}

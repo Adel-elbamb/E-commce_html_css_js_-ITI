@@ -1,0 +1,61 @@
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            height: 100vh;
+           padding: 0;
+           margin: 0;
+        }
+        .cheak{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .success-box {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .success-icon {
+            font-size: 50px;
+            color: #28a745;
+            animation: bounce 2s infinite;
+        }
+
+        h2 {
+            color: #28a745;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    
